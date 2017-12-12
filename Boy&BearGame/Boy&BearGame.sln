@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boy&BearGame", "Assembly-CSharp.csproj", "{7E5F10FA-0823-6832-6EF3-C0EC09457D83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boy&BearGame", "Assembly-CSharp-firstpass.csproj", "{2A79E257-2A70-4BB6-121F-049BF8CD2619}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boy&BearGame", "Assembly-CSharp-Editor-firstpass.csproj", "{B2F756D0-EA23-5928-ECC6-6459B8DCAF31}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,14 +13,6 @@ Global
 		{7E5F10FA-0823-6832-6EF3-C0EC09457D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E5F10FA-0823-6832-6EF3-C0EC09457D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E5F10FA-0823-6832-6EF3-C0EC09457D83}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2A79E257-2A70-4BB6-121F-049BF8CD2619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A79E257-2A70-4BB6-121F-049BF8CD2619}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A79E257-2A70-4BB6-121F-049BF8CD2619}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A79E257-2A70-4BB6-121F-049BF8CD2619}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B2F756D0-EA23-5928-ECC6-6459B8DCAF31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B2F756D0-EA23-5928-ECC6-6459B8DCAF31}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B2F756D0-EA23-5928-ECC6-6459B8DCAF31}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B2F756D0-EA23-5928-ECC6-6459B8DCAF31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
