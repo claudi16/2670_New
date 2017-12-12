@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class Bear : MonoBehaviour {
-	//public static Action End;
+	//public static UnityAction End;
 
 	void OnTriggerEnter()	{ 
-		if(PickUp.pickupCount <=2){
+		if(SVars.pickupCounter <=2){
 			//End();
 		}
-		if(PickUp.pickupCount == 3){
+		if(SVars.pickupCounter == 3){
 			print("You may pass");
 		}
 	}

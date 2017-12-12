@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class EnemyKill : MonoBehaviour {
 	public GameObject particles;
 	public GameObject enemy;
-	public static Action Bounce;
+	public static UnityAction Bounce;
 	void Start(){
 		particles.SetActive(false);
 	}

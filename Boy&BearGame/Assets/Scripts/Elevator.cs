@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour {
 	float dir = 1;
-	public GameObject player;//Parent to the thing
+	private AudioSource audio;
+	public AudioClip ElevatorSFX;
+	//public GameObject player;//Parent to the thing
 
 	void Awake(){
 		gameObject.SetActive(false);
 	}
 	public void Start(){
+		audio = GetComponent<AudioSource>();
+		audio.PlayOneShot(ElevatorSFX, 0.3f);
 		StartCoroutine(Right());
 	}
 	IEnumerator Right(){

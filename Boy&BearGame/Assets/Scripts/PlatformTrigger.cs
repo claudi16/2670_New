@@ -17,5 +17,4 @@ public class PlatformTrigger : MonoBehaviour {
 	void OnTriggerExit(){
 		pp.gameObject.SetActive(false);
 	}
-//CHANGE IT SO IT STILL ONLY ACTIVATES VIA BOX
 }

@@ -8,15 +8,25 @@ ModelImporter:
     100000: Bot
     100002: //RootNode
     100004: Top
+    100006: TerrainNewColor:Bot
+    100008: TerrainNewColor:Top
     400000: Bot
     400002: //RootNode
     400004: Top
+    400006: TerrainNewColor:Bot
+    400008: TerrainNewColor:Top
     2300000: Bot
     2300002: Top
+    2300004: TerrainNewColor:Bot
+    2300006: TerrainNewColor:Top
     3300000: Bot
     3300002: Top
+    3300004: TerrainNewColor:Bot
+    3300006: TerrainNewColor:Top
     4300000: Bot
     4300002: Top
+    4300004: TerrainNewColor:Bot
+    4300006: TerrainNewColor:Top
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class WaterAction : MonoBehaviour {
-	public static Action TempVars;
-	public static Action TempVarsOff;
-	public static Action EnemyChase;
-	public static Action SwimAnim;
+	public static UnityAction TempVars;
+	public static UnityAction TempVarsOff;
+	public static UnityAction EnemyChase;
+	public static UnityAction SwimAnim;
 
 	void OnTriggerStay(){
 		SVars.inWater = true;

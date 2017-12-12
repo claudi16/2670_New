@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class ResetAll : MonoBehaviour {
-	public static Action resetHealth;
-	public static Action resetHUD;
+	public static UnityAction resetHealth;
+	public static UnityAction resetHUD;
 	Vector3 originalPosition;
 	Quaternion originalRot;
 	void Start(){

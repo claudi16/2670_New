@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class EnemyFollow : MonoBehaviour {
 
-	public float speed = 2;
+	public float speed = 1.5f;
 	public float gravity;
-	public static Action Swim;
-	public static Action Idle;
+	public static UnityAction Swim;
+	public static UnityAction Idle;
 	float distance = 8;
 	Transform player;
 	public Transform startPosition;
@@ -23,7 +23,7 @@ public class EnemyFollow : MonoBehaviour {
 		if(Vector3.Distance(player.position, transform.position) <= distance){
 			transform.LookAt(player);
 			Swim();			
-			speed = 2;
+			speed = 1.5f;
 			transform.position += transform.forward*speed*Time.deltaTime;
 		}
 		if(Vector3.Distance(player.position, transform.position) >= distance){

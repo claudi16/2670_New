@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class IndyReset : MonoBehaviour {
-	public GameObject checkpoint;
-	public static Action ResetIndy;
-	public static Action ResetBush;
-	public static Action ResetBerry;
+	/*public GameObject checkpoint;
+	public static UnityAction ResetIndy;
+	public static UnityAction ResetBush;
+	public static UnityAction ResetBerry;
 	public GameObject lever;
 
 	void OnControllerColliderHit(ControllerColliderHit hit){
@@ -24,6 +24,6 @@ public class IndyReset : MonoBehaviour {
 	void Restart(){
 		gameObject.SetActive(true);
 		transform.position = checkpoint.transform.position;	
-	}
+	}*/
 
 }

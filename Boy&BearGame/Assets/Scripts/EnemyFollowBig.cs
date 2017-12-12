@@ -8,7 +8,7 @@ public class EnemyFollowBig : MonoBehaviour {
 	public float gravity;
 	float distance = 30;
 	Transform player;
-	bool follow = true;
+	public Transform startPosition;
 
 	void Start(){
 		player = GameObject.FindWithTag("Player").transform;
@@ -17,17 +17,15 @@ public class EnemyFollowBig : MonoBehaviour {
 	}
 	void ChaseHandler() {
 	
-		if(Vector3.Distance(player.position, transform.position) <= distance && follow == true){
+		if(Vector3.Distance(player.position, transform.position) <= distance /*&& follow == true*/){
 			transform.LookAt(player);			
-			speed = 4;
+			speed = 2;
+			transform.position += transform.forward*speed*Time.deltaTime;
+		}
+		if(SVars.inWater == false){
+			transform.LookAt(startPosition);
 			transform.position += transform.forward*speed*Time.deltaTime;
 		}	
-	}
-	void OnTriggerEnter(Collider big){
-		if(big.gameObject.tag == "BigStop"){
-		follow = false;
-		transform.position = big.transform.position;
-		}
 	}
 
 	/*IEnumerator follow(){

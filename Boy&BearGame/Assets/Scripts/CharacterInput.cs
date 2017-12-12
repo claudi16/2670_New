@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class CharacterInput : MonoBehaviour {
 
-	public static Action<float> KeyAction;
-    public static Action JumpAction;
-    public static Action JumpAnim;
-    public static Action Dash;
+	public static UnityAction<float> KeyAction;
+    public static UnityAction JumpAction;
+    public static UnityAction JumpAnim;
+    public static UnityAction Dash;
     public bool PlayerInput = true;
 
     public void Start(){

@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4417392113080638}
   - component: {fileID: 33620846219679124}
   - component: {fileID: 23655045897673516}
-  - component: {fileID: 65627114318833634}
+  - component: {fileID: 95336102260700014}
+  - component: {fileID: 64446225358149352}
   m_Layer: 0
   m_Name: FloatingPlatform
   m_TagString: Untagged
@@ -55,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8be395cf8255247489d94572accd3877, type: 2}
+  - {fileID: 2100000, guid: 5af0a9b9704b24afb94c43ad033185d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,8 +82,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1825683911872416}
   m_Mesh: {fileID: 4300000, guid: 7c60ab8e21076465dadb3058354d394e, type: 3}
---- !u!65 &65627114318833634
-BoxCollider:
+--- !u!64 &64446225358149352
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -91,5 +92,24 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2300426, y: 0.6449349, z: 1.2363993}
-  m_Center: {x: -0.0019937162, y: -0.12236093, z: 0.0055676117}
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 7c60ab8e21076465dadb3058354d394e, type: 3}
+--- !u!95 &95336102260700014
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1825683911872416}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 7c60ab8e21076465dadb3058354d394e, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1

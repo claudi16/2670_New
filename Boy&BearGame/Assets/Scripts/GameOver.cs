@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System;
+using UnityEngine.Events;
 
 public class GameOver : MonoBehaviour {
-	public static Action resetAll;
+	public static UnityAction resetAll;
 	void Start(){
-		HealthHearts.ResetGame += ResetGameHandler;
+		CharacterHealth.ResetGame += ResetGameHandler;
 	}
 	public void ResetGameHandler(){
 		resetAll();

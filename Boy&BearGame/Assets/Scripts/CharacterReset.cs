@@ -10,7 +10,7 @@ public class CharacterReset : MonoBehaviour {
 	Vector3 originalPosition;
 
 	void Start(){
-		HealthHearts.ResetGame += ResetThis;
+		CharacterHealth.ResetGame += ResetThis;
 		//Bear.End += ResetThis;
 		originalPosition = gameObject.transform.position;
 		//start = GameObject.Find("startPoint");

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FallingPlatforms : MonoBehaviour {
 	
-	public bool useGravity;
+	//public bool useGravity;
 	GameObject platform;
 
 	void OnControllerColliderHit(ControllerColliderHit hit)

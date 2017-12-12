@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class Door : MonoBehaviour {
 	public GameObject door;
-	void OnTriggerEnter(Collider key){
-		door.SetActive(false);
-		if(key.gameObject.tag == "Box"){
-			key.transform.parent = gameObject.transform;
-			key.transform.localPosition = Vector3.zero;
-			key.transform.localPosition = new Vector3(1,0,0);
+	public GameObject relicItem;
+	public GameObject relicHUD;
+	private AudioSource audio;
+	public AudioClip pickupChime;
+
+	void Start(){
+		relicItem.SetActive(false);
+		audio = GetComponent<AudioSource>();//Audio
+	}
+	void OnTriggerEnter(){
+		if(relicHUD.activeInHierarchy == true){
+		audio.PlayOneShot(pickupChime, 0.5f);//Audio
+		relicItem.SetActive(true);
+		door.SetActive(false);	
+		transform.gameObject.GetComponent<Collider>().enabled = false;
+		relicHUD.SetActive(false);	
 		}
 	}
+
 }

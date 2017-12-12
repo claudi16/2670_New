@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class MoveObject : MonoBehaviour {
-	public static Action Pull;
-	public static Action carryAnim;
+	public static UnityAction Pull;
+	public static UnityAction carryAnim;
 	public bool isCarry = true;
 
 		void Start(){

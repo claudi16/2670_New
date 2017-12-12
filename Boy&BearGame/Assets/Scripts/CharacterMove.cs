@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class CharacterMove : MonoBehaviour {
-	public static Action doubleAnim;
+	public static UnityAction doubleAnim;
+	public static UnityAction stopAudio;
 	CharacterController cc;
 	Vector3 tempMove;
 	float knockback = 2f;
@@ -36,7 +37,8 @@ public class CharacterMove : MonoBehaviour {
 
 	}
 	void Jump(){
-		if(SVars.jumpScore < 2){
+		if(SVars.jumpScore < 2){//Double Jump
+			stopAudio();
 			doubleAnim();
 			tempMove.y = SVars.jumpHeight;
 			SVars.jumpScore++;
@@ -46,7 +48,7 @@ public class CharacterMove : MonoBehaviour {
 		}
 	}
 	void OnTriggerEnter(Collider other){ //KNOCKBACK
-		if(other.gameObject.tag == "ResetFall" || other.gameObject.tag == "Enemy"){	
+		if(other.gameObject.tag == "Enemy"){	
 			if(other.transform.position.x <= gameObject.transform.position.x){
 			 tempMove.y = 0.1f;
 			 tempMove.x = knockback;
@@ -57,7 +59,7 @@ public class CharacterMove : MonoBehaviour {
 			}
 		}
 	}
-	void BounceHandler(){
+	void BounceHandler(){//Bounce
 		doubleAnim();
 		tempMove.y = 0.3f;
 	}

@@ -6,10 +6,20 @@ ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
+    100002: TerrainNewColor:Bot
+    100004: TerrainNewColor:Top
     400000: //RootNode
+    400002: TerrainNewColor:Bot
+    400004: TerrainNewColor:Top
     2300000: //RootNode
+    2300002: TerrainNewColor:Bot
+    2300004: TerrainNewColor:Top
     3300000: //RootNode
+    3300002: TerrainNewColor:Bot
+    3300004: TerrainNewColor:Top
     4300000: pCube1
+    4300002: TerrainNewColor:Bot
+    4300004: TerrainNewColor:Top
     9500000: //RootNode
   materials:
     importMaterials: 1

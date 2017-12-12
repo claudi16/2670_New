@@ -1,40 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class HealthHarm : MonoBehaviour {
-	public static Action Hurt;
-	public static Action KnockBack;
-	public static Action Blink;
-	public static Action KBAnim;
+	public static UnityAction Hurt;
+	public static UnityAction KnockBack;
+	public static UnityAction Blink;
+	public static UnityAction KBAnim;
+	public static UnityAction CheckpointChar;
 	GameObject objHarm;
-	public static bool harmOnce;
-	public static bool blinkCount = false;
+	private AudioSource audio;
+	public AudioClip injureAudio;
+	public static bool harmOnce = false;
 
-	void OnControllerColliderHit(ControllerColliderHit hit){
-		if(hit.gameObject.tag == "Indy"){
-		Hurt();
-		}
+	void Start(){
+		audio = GetComponent<AudioSource>();
 	}
 	void OnTriggerEnter(Collider other){
-		if(other.gameObject.tag == "ResetFall" || other.gameObject.tag == "Enemy"){
-		blinkCount = true;
-		gameObject.layer = 17;			
-		harmOnce = true;
-		SVars.blinks = 0;
+		if(other.gameObject.tag == "Enemy" || other.gameObject.tag == "Indy"){	
+		audio.PlayOneShot(injureAudio, 0.4f);	//Audio SFX	
+		Hurt();	
 		KBAnim();
-		Hurt();
 		KnockBack();
 		Blink();
-		Invoke("BlinkEnd", 2);
 		}
-	}
-	void OnTriggerExit(){
-		harmOnce = false;
-	}
-	void BlinkEnd(){
-		blinkCount = false;
-		gameObject.layer = 8;
+		if(other.gameObject.tag == "ResetFall"){
+		audio.PlayOneShot(injureAudio, 0.4f); //Audio SFX
+		Hurt();
+		CheckpointChar();
+		}
 	}
 }

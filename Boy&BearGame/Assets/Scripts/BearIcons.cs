@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
+
 public class BearIcons : MonoBehaviour {
 
-	public Sprite[] BearItems;
+	/*public Sprite[] BearItems;
 	public SpriteRenderer BearItemsTracker;
 
 	void Start(){
@@ -16,5 +16,5 @@ public class BearIcons : MonoBehaviour {
 		if(PickUp.pickupCount >=3){
 		BearItemsTracker.sprite = BearItems[3];
 		}
-	}
+	}*/
 }

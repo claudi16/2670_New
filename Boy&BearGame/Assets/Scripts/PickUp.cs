@@ -1,30 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class PickUp : MonoBehaviour {
-	public static Action BearItem;
-	public static int pickupCount = 0;
+	public static UnityAction BearItem;
+	public static UnityAction Picked;
 	public GameObject newArea;
-	public GameObject itemHUD;
+	private AudioSource audio;
+	public AudioClip pickupChime;
 
-	void Start(){
+	void Start(){//SET TO FALSE
+		audio = GetComponent<AudioSource>();
 		ResetAll.resetHUD += resetHUDHandler;
-		itemHUD.gameObject.SetActive(false);
-		//newArea.SetActive(false);
+		BushReset.caveBerryReset += berryResetHandler;
+		newArea.SetActive(false);
 	}
 	void OnTriggerEnter(){
-		itemHUD.SetActive(true);
-		pickupCount++;
-		BearItem();
+		audio.PlayOneShot(pickupChime, 0.6f);
+		Picked();
+		Invoke("Disable", 0.25f);
 		newArea.gameObject.SetActive(true);
-		gameObject.SetActive(false);
+	}		
+	void Disable(){
+			gameObject.SetActive(false);	
 	}
 	void resetHUDHandler(){
 		gameObject.SetActive(true);
-		itemHUD.gameObject.SetActive(false);
 		newArea.SetActive(false);
-		pickupCount = 0;
+	}
+	void berryResetHandler(){
+		gameObject.SetActive(true);
 	}
 }

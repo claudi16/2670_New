@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class BoxTrigger : MonoBehaviour {
 
-	public GameObject trigger;
-	public GameObject triggered;
-	public float z;
+	public GameObject newArea;
+	private AudioSource audio;
+	public AudioClip areaChime;
 
+	void Start(){
+		audio = GetComponent<AudioSource>();
+		newArea.SetActive(false);
+	}
 	public void OnTriggerEnter(){
-		triggered.transform.Rotate(0,0,z);
+		audio.PlayOneShot(areaChime, 0.4f);
+		newArea.SetActive(true);
 	}
 	public void OnTriggerExit(){
-		triggered.transform.Rotate(0,0,-z);
+		newArea.SetActive(false);
 	}
 }

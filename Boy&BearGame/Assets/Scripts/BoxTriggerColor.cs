@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BoxTriggerColor : MonoBehaviour {
-//Colored boxes aren't working fix it gurl
+
 	public GameObject trigger;
 	public GameObject boxCol;
 	private static int boxTriggered = 0;
 	public GameObject newArea;
+	private AudioSource audio;
+	public AudioClip chimeSFX;
 
 	void Start(){
-		//CHANGE TO FALSE
+		audio = GetComponent<AudioSource>();
 		newArea.SetActive(false);
 	}
 	public void OnTriggerEnter(Collider box){
@@ -18,6 +20,7 @@ public class BoxTriggerColor : MonoBehaviour {
 		boxTriggered++;			
 		}
 		if(boxTriggered == 2){
+		audio.PlayOneShot(chimeSFX, 0.4f);
 		newArea.SetActive(true);
 		}
 	}

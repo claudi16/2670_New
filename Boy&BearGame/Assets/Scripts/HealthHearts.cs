@@ -2,39 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
+using UnityEngine.Events;
 public class HealthHearts : MonoBehaviour {
-
-	public Sprite[] HeartSprites;
+//GET RID OF IT ALL
+	/*public Sprite[] HeartSprites;
 	public Image HeartSpritesTracker;
-	public static Action ResetGame;
+	public static UnityAction ResetGame;
 	public bool AddHealth = true;
+	//public bool ishealthCount;
 
 	void Start(){
 		ResetAll.resetHealth += resetHealthHandler;
-		HealthHarm.Hurt += HurtHandler;	
-		StartCoroutine(ThreeHealth());	
+		//HealthHarm.Hurt += HurtHandler;	
+		//StartCoroutine(ThreeHealth());	
 	}	
 	
-	IEnumerator ThreeHealth(){ //Regain Health
+	/*IEnumerator ThreeHealth(){ //Regain Health
 		while(AddHealth){
 			if(SVars.berryCount % 3 == 0 && SVars.healthCounter <= 2 && SVars.healthCounter >= 1){
 				print("health added");
 			SVars.healthCounter += 1;
-			SVars.berryCount++;
 			}
 		yield return new WaitForSeconds(0.1f);			
 		}
 
 	}
+	IEnumerator HeartTrack(){
+		while(ishealthCount){
+		HeartSpritesTracker.sprite = HeartSprites[SVars.healthCounter];	
+		yield return new WaitForSeconds(0.1f);
+		}
+	}*/
 
-	void HurtHandler(){
+	/*void HurtHandler(){
 		if(HealthHarm.harmOnce == true){
 		SVars.healthCounter++;
-		HealthHarm.harmOnce = false;			
+		HealthHarm.harmOnce = false;	
+		StartCoroutine(HeartTrack());		
 		}
-		HeartSpritesTracker.sprite = HeartSprites[SVars.healthCounter];		
-		if(SVars.healthCounter >=3){
+		//HeartSpritesTracker.sprite = HeartSprites[SVars.healthCounter];		
+		if(SVars.healthCounter >=3){//Reset Count
 		SVars.inWater = false;
 		SVars.healthCounter = 0;
 		HeartSpritesTracker.sprite = HeartSprites[0];
@@ -44,6 +51,6 @@ public class HealthHearts : MonoBehaviour {
 	void resetHealthHandler(){
 		SVars.healthCounter = 0;
 		HeartSpritesTracker.sprite = HeartSprites[0];		
-	}
+	}*/
 
 }

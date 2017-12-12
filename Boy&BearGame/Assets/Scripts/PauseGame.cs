@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class PauseGame : MonoBehaviour {
-	public static Action pauseMenu;
+	public static UnityAction pauseMenu;
 	public void Pause(){
 		SVars.jump = false;
 		pauseMenu();
