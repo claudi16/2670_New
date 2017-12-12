@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Boy&BearGameNew.unity
+  isLoaded: 1
+  isActive: 1
