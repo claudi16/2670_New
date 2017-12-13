@@ -76,6 +76,7 @@
      <Compile Include="Assets\Scripts\CloseStart.cs" />
      <Compile Include="Assets\Scripts\ColorRockUnparent.cs" />
      <Compile Include="Assets\Scripts\Continue.cs" />
+     <Compile Include="Assets\Scripts\Data.cs" />
      <Compile Include="Assets\Scripts\DestroyBridge.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\Elevator.cs" />
@@ -86,7 +87,9 @@
      <Compile Include="Assets\Scripts\EnemyFollowLand.cs" />
      <Compile Include="Assets\Scripts\EnemyKill.cs" />
      <Compile Include="Assets\Scripts\FallingPlatforms.cs" />
+     <Compile Include="Assets\Scripts\GameData.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
+     <Compile Include="Assets\Scripts\GetData.cs" />
      <Compile Include="Assets\Scripts\HealthFX.cs" />
      <Compile Include="Assets\Scripts\HealthHarm.cs" />
      <Compile Include="Assets\Scripts\Indy.cs" />
