@@ -18,7 +18,7 @@ public class MoveObject : MonoBehaviour {
 			collision.transform.parent = gameObject.transform;
 		}
 	}
-	IEnumerator DropObj(){
+	IEnumerator DropObj(){//Detach Children
 		while(isCarry){
 			if(Input.GetKeyUp(KeyCode.C)){
 				SVars.jump = true;
@@ -32,7 +32,7 @@ public class MoveObject : MonoBehaviour {
 	}
 }
 
-
+//OldIterations
 	/*void OnControllerColliderHit(ControllerColliderHit hit){
 		Rigidbody body = hit.collider.attachedRigidbody;
 		if(Input.GetKey(KeyCode.C) && hit.gameObject.tag == "Box"){

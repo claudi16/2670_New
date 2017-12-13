@@ -1,36 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class BoxReset : MonoBehaviour {
 
-	/*public GameObject resetPoint;
-	public GameObject resetPoint2;
-	public GameObject boxNum;
+	public GameObject resetPoint2;//For Color Puzzle
+	Vector3 originalPosition;
 
 	void Start(){
-		EndGame.End += resetBox;
+		GameOver.resetAll += resetBox;
+		originalPosition = gameObject.transform.position;
 	}
 
 	void OnTriggerEnter(Collider touch)
 	{
 		if(touch.gameObject.tag == "ResetFall" || touch.gameObject.tag == "BoxResetTouch"){	
-		boxNum.transform.position = resetPoint.transform.position;
-		boxNum.SetActive(false);
-		Invoke("resetBox", 0.5f);
+		transform.position = originalPosition;
+		gameObject.SetActive(false);
+		Invoke("resetBox", 0.6f);
 		}
-		if(touch.gameObject.tag == "BoxResetTouchSpecial"){
-		boxNum.transform.position = resetPoint2.transform.position;
-		boxNum.SetActive(false);
-		Invoke("resetBox2", 0.5f);
+		if(touch.gameObject.tag == "BoxResetTouchSpecial"){ //Color Puzzle
+		gameObject.transform.position = resetPoint2.transform.position;
+		gameObject.SetActive(false);
+		Invoke("resetBox2", 0.6f);
 		}
 	}
-	void resetBox(){
-		boxNum.SetActive(true);
-		boxNum.transform.position = resetPoint.transform.position;
+	void resetBox(){ //Reappear
+		gameObject.SetActive(true);
+		gameObject.transform.position = originalPosition;
 	}
-	void resetBox2(){
-		boxNum.SetActive(true);
-		boxNum.transform.position = resetPoint2.transform.position;
-	}*/
+	void resetBox2(){//Reappear Color Puzzle
+		gameObject.SetActive(true);
+		gameObject.transform.position = resetPoint2.transform.position;
+	}
 }

@@ -14,7 +14,7 @@ public class CharacterBlink : MonoBehaviour {
 		blinkCount = true;
 		StartCoroutine(Blinking());
 		Invoke("BlinkEnd", 2);
-		gameObject.layer = 17;
+		gameObject.layer = 17;//Invincibility layer
 	}
 
 	IEnumerator Blinking(){
@@ -27,6 +27,6 @@ public class CharacterBlink : MonoBehaviour {
 	}
 	void BlinkEnd(){//End Blinking
 		blinkCount = false;
-		gameObject.layer = 8;
+		gameObject.layer = 8;//back to player layer
 	}
 }

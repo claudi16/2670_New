@@ -54,16 +54,11 @@
      <Compile Include="Assets\Scripts\AnimateFish.cs" />
      <Compile Include="Assets\Scripts\AnimateFishBig.cs" />
      <Compile Include="Assets\Scripts\AnimatePlayer.cs" />
-     <Compile Include="Assets\Scripts\BallRollTrigger.cs" />
      <Compile Include="Assets\Scripts\Bear.cs" />
-     <Compile Include="Assets\Scripts\BearIcons.cs" />
      <Compile Include="Assets\Scripts\BerryCounterText.cs" />
      <Compile Include="Assets\Scripts\BoxReset.cs" />
-     <Compile Include="Assets\Scripts\BoxReset2.cs" />
      <Compile Include="Assets\Scripts\BoxTrigger.cs" />
      <Compile Include="Assets\Scripts\BoxTriggerColor.cs" />
-     <Compile Include="Assets\Scripts\BridgeSwitch.cs" />
-     <Compile Include="Assets\Scripts\Bush.cs" />
      <Compile Include="Assets\Scripts\BushReset.cs" />
      <Compile Include="Assets\Scripts\CameraScript.cs" />
      <Compile Include="Assets\Scripts\CaveLightDim.cs" />
@@ -76,7 +71,6 @@
      <Compile Include="Assets\Scripts\CharacterInput.cs" />
      <Compile Include="Assets\Scripts\CharacterKnockback.cs" />
      <Compile Include="Assets\Scripts\CharacterMove.cs" />
-     <Compile Include="Assets\Scripts\CharacterReset.cs" />
      <Compile Include="Assets\Scripts\CheckpointAssign.cs" />
      <Compile Include="Assets\Scripts\CheckpointCharReset.cs" />
      <Compile Include="Assets\Scripts\CloseStart.cs" />
@@ -95,10 +89,8 @@
      <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\HealthFX.cs" />
      <Compile Include="Assets\Scripts\HealthHarm.cs" />
-     <Compile Include="Assets\Scripts\HealthHearts.cs" />
      <Compile Include="Assets\Scripts\Indy.cs" />
      <Compile Include="Assets\Scripts\IndyBoxTriggers.cs" />
-     <Compile Include="Assets\Scripts\IndyReset.cs" />
      <Compile Include="Assets\Scripts\IndySwitch.cs" />
      <Compile Include="Assets\Scripts\MoveObject.cs" />
      <Compile Include="Assets\Scripts\NestAnimAudio.cs" />
