@@ -92,6 +92,7 @@
      <Compile Include="Assets\Scripts\GetData.cs" />
      <Compile Include="Assets\Scripts\HealthFX.cs" />
      <Compile Include="Assets\Scripts\HealthHarm.cs" />
+     <Compile Include="Assets\Scripts\HUDShow.cs" />
      <Compile Include="Assets\Scripts\Indy.cs" />
      <Compile Include="Assets\Scripts\IndyBoxTriggers.cs" />
      <Compile Include="Assets\Scripts\IndySwitch.cs" />
