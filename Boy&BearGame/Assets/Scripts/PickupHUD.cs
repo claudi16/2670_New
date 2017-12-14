@@ -25,6 +25,7 @@ public class PickupHUD : MonoBehaviour {
 	void resetHUDHandler(){//Reset Items HUD
 		SVars.pickupCounter = 0;
 		PickupSpritesTracker.sprite = PickupSprites[0];	
+		print("hi");
 	}
 	void berryResetHandler(){//ResetCounter
 		SVars.pickupCounter--;
