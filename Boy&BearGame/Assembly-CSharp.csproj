@@ -134,6 +134,7 @@
      <Compile Include="Assets\Scripts\SVars.cs" />
      <Compile Include="Assets\Scripts\WaterAction.cs" />
      <Compile Include="Assets\Scripts\WaterVars.cs" />
+     <Compile Include="Assets\Scripts\YouWin.cs" />
      <None Include="Assets\RockVR\Video\Shaders\DownsamplePro.shader" />
      <None Include="Assets\RockVR\Video\Shaders\Cubemap2Equirectangular.shader" />
      <None Include="Assets\RockVR\Video\Shaders\CubemapDisplayPro.shader" />
